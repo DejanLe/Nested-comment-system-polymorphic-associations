@@ -1,8 +1,16 @@
-<h1>Stories</h1>
-<%= link_to "Creat new story", new_story_path %>
-<% @stories.each do |story| %>
-  <p>
-    <%= link_to(story.title, story.url, target: "_blank") %> - <%= link_to("Show Page", story) %>
-  </p>
+<div class="stories">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <h1>Stories</h1>
 
-<% end %>
+          <% @stories.each do |story| %>
+            <p>
+              <%= link_to(story.title, story.url, target: "_blank") %> - <%= link_to("read and comment post", story) %>
+            </p>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,10 +1,15 @@
+<div class="stories">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
 <li>
   <%= comment.body %> -
   <small>Submitted <%= time_ago_in_words(comment.created_at) %> ago</small>
 
   <%= form_for [comment, Comment.new] do |f| %>
-      <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
-      <%= f.submit "Reply"  %>
+      <%= f.text_area :body, placeholder: "Add a Reply", class: "form-control" , required: true%><br/>
+      <%= f.submit "Reply", class: "btn btn-outline-primary"  %>
       <% end %>
 
   <ul>
@@ -12,3 +17,7 @@
   </ul>
 
 </li>
+</div>
+</div>
+</div>
+</div>
